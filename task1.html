@@ -1,25 +1,51 @@
 <!DOCTYPE html>
 <html>
 <title>Task 1</title>
+
 <style>
 .header{
-    margin: 200px 700px 200px 700px;
+    margin: 100px 800px 100px 800px;
 	padding: 10px;
     	width: 300px;
 			height: 300px;
 			background-color: #fff;
 			border-radius: 5px;
 }
+.img{
+    height:100px;
+    weight:100px;
+    margin:100px 100px 100px 100px;
+
+}
 </style>
 <body bgcolor="blue">
-<div class="header"><form>
+    <center><div class=""img></div><img src="file:///home/anand/Pictures/Screenshot%20from%202020-03-07%2000-28-32.png" align="center" alt="Avatar" class="avatar"></div></center>
+<div class="header"><form name="loginForm" method="post" action="login.php">
+   
 <h1><center>LOGIN PAGE</center></h1>
 <h2><label>Email address</label><br>
-    <input type="email" placeholder="Enter Email" required><br>
+    <input type="email" placeholder="Enter Email" required name="emailid"><br>
     <label>Password</label><br>
-    <input type="password" placeholder="Password" required><br>
-    <button type="button" bgcolor="blue">Submit</button></h2>
+    <input type="password" placeholder="Password" required name="pwd"><br>
+    <button type="button" onclick="return check(this.form)" value="Login">Submit</button></h2>
+    <button type="reset">Reset</button></h2>
 </form>
 </div>
+<script language="javascript">
+    function check(form)
+    {
+    
+    if(form.emailid.value == "anand25699@gmail.com" && form.pwd.value == "anandpatel")
+    {
+        window.open('file:///home/anand/Desktop/success.html')
+        
+    }
+    else
+    {
+        alert("Error Password or Username and re-enter")
+        
+    }
+    }
+    </script>
 </body>
 </html>
